@@ -1,0 +1,47 @@
+A really useful program that i found is SNAP.
+It can be used to take a closer look at the Sentinel2Data and to watch the images.
+Another useful thing about SNAP is that it has a Sen2Cor Plugin which can be started inside the programm and the output
+file is immediately shown inside SNAP.
+
+Installation:
+
+Windows 64bit: http://step.esa.int/downloads/6.0/installers/esa-snap_all_windows-x64_6_0.exe
+Windows 32Bit: http://step.esa.int/downloads/6.0/installers/esa-snap_all_windows_6_0.exe
+Mac: http://step.esa.int/downloads/6.0/installers/esa-snap_all_macos_6_0.dmg
+Unix 64-bit: http://step.esa.int/downloads/6.0/installers/esa-snap_all_unix_6_0.sh
+
+Install SNAP and open it up.
+
+On the top left you can open a new file.
+Navigate to your extracted Sentinel2 Image folder open it and then you want to open the MTD file on the Bottom
+It is usually called something like MTD_MSIL1C
+This will grant you access to the whole image and its data.
+
+Create and image
+
+Now you want to rightclick on the file and select "create rgb image". it will take some time but it will open up
+the image.
+
+Install Sen2Cor Plugin.
+This one can be quite tricky sometimes.
+
+Open SNAP
+In the top bar you will find Tools > Plugins
+First of all check for updates and install them. 
+(If the update part is not working contact me and i will provide you the ways to get it working)
+Next go to Available Plugins and install the Sen2Cor processor.
+Restart Snap.
+Open up the desired file and create an RGB image.
+Next go for tools > "manage external tools".
+Sen2Cor should show up but the status should say an "!"
+Select the file that you want and klick on run
+This should lead you to the next window .
+select processing parameters and check the "display execution output" box.
+Click on "Run" on the bottom.
+It should tell you that something is missing or needed, i dont really remember. But just accept whatever the programm wants.
+After a few restarts it should work. 
+Now you can preprocess the images in SNAP.
+Once the programm finished the output file should be shown on the left.
+
+
+
