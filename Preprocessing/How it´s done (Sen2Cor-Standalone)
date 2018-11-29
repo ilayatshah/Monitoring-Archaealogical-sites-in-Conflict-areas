@@ -1,0 +1,70 @@
+First of all you need a image that you want to preprocess.
+
+You can do that by using R.
+
+Once you have your Image downloaded it is a Zip-File which needs to be extracted to a place where it is easily accesible.
+If you use too many subfolders it can cause some trouble. (I prefer Desktop)
+
+Once you have the image in a regular folder you will need the Sen2Cor application which is based on Python.
+So make sure that you have Python installed correctly, and that the system enviroment variable is set to the correct path of your python
+installation.
+
+Standalone installers:
+Windows installer: http://step.esa.int/thirdparties/sen2cor/2.5.5/Sen2Cor-02.05.05-win64.zip
+Linux installer: http://step.esa.int/thirdparties/sen2cor/2.5.5/Sen2Cor-02.05.05-Linux64.run
+Mac installer: http://step.esa.int/thirdparties/sen2cor/2.5.5/Sen2Cor-02.05.05-Darwin64.run
+
+Download the installer that fits your OS. I only did it with Windows.
+
+On Windows:
+
+Extract the downloaded Zip-Folder.
+
+Open up CMD. And navigate to your Sen2Cor folder. e.g. cd C:\Users\Benny\Sen2Cor-02.05.05-win64
+
+Then you type in: L2A_Process.bat --help
+
+It should show: C:\Users\Benny\Sen2Cor-02.05.05-win64>L2A_Process.bat --help
+usage: L2A_Process.py [-h] [--resolution {10,20,60}] [--sc_only] [--cr_only]
+                      [--refresh] [--GIP_L2A GIP_L2A]
+                      [--GIP_L2A_SC GIP_L2A_SC] [--GIP_L2A_AC GIP_L2A_AC]
+                      [--GIP_L2A_PB GIP_L2A_PB]
+                      directory
+
+Sentinel-2 Level 2A Processor (Sen2Cor). Version: 2.5.5, created: 2018.03.19,
+supporting Level-1C product version <= 14.5.
+
+positional arguments:
+  directory             Directory where the Level-1C input files are located
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --resolution {10,20,60}
+                        Target resolution, can be 10, 20 or 60m. If omitted,
+                        all resolutions will be processed
+  --sc_only             Performs only the scene classification at 60 or 20m
+                        resolution
+  --cr_only             Performs only the creation of the L2A product tree, no
+                        processing
+  --refresh             Performs a refresh of the persistent configuration
+                        before start
+  --GIP_L2A GIP_L2A     Select the user GIPP
+  --GIP_L2A_SC GIP_L2A_SC
+                        Select the scene classification GIPP
+  --GIP_L2A_AC GIP_L2A_AC
+                        Select the atmospheric correction GIPP
+  --GIP_L2A_PB GIP_L2A_PB
+                        Select the processing baseline GIPP
+                        
+If you get to this point you should be ready to use the Sen2Cor preprocessing:
+
+Get the Adress of your Imagefolder e.g: D:\S2A_MSIL1C_20161030T081042_N0204_R078_T37SDU_20161030T081834.SAFE
+
+Type in the CMD (still in your Sen2Cor Folder): L2A_Process.bat D:\S2A_MSIL1C_20161030T081042_N0204_R078_T37SDU_20161030T081834.SAFE
+
+This shall start the process. It is important to know that we want the best achievable resolution, which in case of sentinel 2 is 10. 
+To get there we have to start the process like shown above, which will also preprocess in the 60 and 20 resolution. 
+Those are needed for the 10m process.
+If you ever want a lower resolution you can type --resolutuion 60, or --resolution 20 before your path.
+Example: L2A_Process.bat --resolution 60 D:\S2A_MSIL1C_20161030T081042_N0204_R078_T37SDU_20161030T081834.SAFE
+If you type --resolution 10 the process will stop at 30%.
