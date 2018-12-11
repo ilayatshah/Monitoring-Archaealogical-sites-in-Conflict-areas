@@ -1,0 +1,27 @@
+So the automation is up and running and here i will show you how it´s done.
+
+First of all you need Python to be installed and make sure that you have Python installed correctly, and that the system enviroment 
+variable is set to the correct path of your python installation.
+
+Next on you will need the right GDAL Package for your Python setup
+
+Open up your CMD and type in: python
+it will show something along the lines of:Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+The Python and the Bit Versions are importnat for the next steps. In the top example it would be "3.7" and "AMD64"
+
+With these infos go to https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal and search for the file that is fitting your Python
+Example: For me it would be GDAL‑2.3.2‑cp37‑cp37m‑win_amd64.whl because i use Python 3.7 with an 64bit architecture.
+
+Now you will open up the cmd again and navigate to folder where the newly downloaded file is e.g. "cd C:\Users\Benny\Desktop   
+and type in "python -m pip install GDAL-[etc.].whl"
+
+If everything worked you can open up a new cmd window, type in python press enter and try "import gdal"
+IMPORTANT: It can happen that there is an error which says something about an "ogr" file(i dont really remember correctly) 
+just type "import gdal" in again and it should work. 
+you can then head to your gdal file  which is normally installed in your programms folder. navigate to gdal_plugins and delete that 
+"ogr" file. 
+
+Now make sure that Sen2Cor is installed correctly. I provided instructions for that here:
+https://github.com/Kirubamoh/Monitoring-Archaealogical-sites-in-Conflict-areas/blob/master/Preprocessing/How%20it%C2%B4s%20done%20(Sen2Cor-Standalone)
+
+Next on you will need to download the scripts
