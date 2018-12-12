@@ -1,0 +1,52 @@
+Here you will find the instructions for downloading Sentinel1 Data with R
+
+First of all load in the following packages
+library(sf)
+library(sp)
+library(raster)
+library(mapview)
+library(mapedit)
+
+Then load in 
+library(getSpatialData)
+
+Next you will need do declare the aoi by typing in
+
+drwn = drawFeatures()
+mapview(drwn)
+aoi <- drwn$geometry
+
+This will open up a window on the right side where you can select the aoi by hand. Font forget to click the "done" button on the
+bottom right
+
+Now you need to declare your username and password for esa
+
+username = "username"
+password = "password"
+
+Then type in:
+query <- getSentinel_query(time_range = c("2018-10-01", "2018-11-01"), aoi = aoi, platform = "Sentinel-1", username = username, password = password)
+You can change the timerange right here its in (YYYYMMDD) format ^
+
+After that you can take a look at the result by typing in: 
+View(query)
+
+A list of files will show up.
+The best Files for us to use are unfortunatly the biggest ones. They are from the SLC type and are around 7GB.
+They are called something like S1A_IW_SLC__1SDV_20181016T152457_20181016
+
+Look for the one with a date that you want scroll to the left and memorize the number of the table listing.
+
+if you want to download the 7th file you need to type in:
+getSentinel_data(records = query[7,],dir_out = "D:/Sattelitendaten/Sentinel1", username = username, password = password,)
+the dir_out = "fsdfsdffdf" part declares the folder where the image is downloaded to.
+
+Hit enter and the download should start
+
+
+
+
+
+
+
+
