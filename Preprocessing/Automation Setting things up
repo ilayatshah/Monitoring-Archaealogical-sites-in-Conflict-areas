@@ -21,6 +21,9 @@ just type "import gdal" in again and it should work.
 you can then head to your gdal file  which is normally installed in your programms folder. navigate to gdal_plugins and delete that 
 "ogr" file. 
 
+You will also need the "sentinelsat" package. to instal that navigate to you python folder in cmd and type in:
+"pip install sentinelsat"
+
 Now make sure that Sen2Cor is installed correctly. I provided instructions for that here:
 https://github.com/Kirubamoh/Monitoring-Archaealogical-sites-in-Conflict-areas/blob/master/Preprocessing/How%20it%C2%B4s%20done%20(Sen2Cor-Standalone)
 
