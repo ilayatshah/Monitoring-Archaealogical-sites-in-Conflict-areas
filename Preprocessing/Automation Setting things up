@@ -12,7 +12,7 @@ The Python and the Bit Versions are important for the next steps. In the top exa
 With these infos go to https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal and search for the file that is fitting your Python
 Example: For me it would be GDAL‑2.3.2‑cp37‑cp37m‑win_amd64.whl because i use Python 3.7 with an 64bit architecture.
 
-Now you will open up the cmd again and navigate to folder where the newly downloaded file is e.g. "cd C:\Users\Benny\Desktop   
+Now you will open up the cmd again and navigate to the folder where the newly downloaded file is e.g. "cd C:\Users\Benny\Desktop   
 and type in "python -m pip install GDAL-[etc.].whl"
 
 If everything worked you can open up a new cmd window, type in python press enter and try "import gdal"
@@ -21,11 +21,12 @@ just type "import gdal" in again and it should work.
 you can then head to your gdal file  which is normally installed in your programms folder. navigate to gdal_plugins and delete that 
 "ogr" file. 
 
-You will also need the "sentinelsat" package. to instal that navigate to you python folder in cmd and type in:
+You will also need the "sentinelsat" package. to install that navigate to you python folder in cmd and type in:
 "pip install sentinelsat"
 
 Now make sure that Sen2Cor is installed correctly. I provided instructions for that here:
 https://github.com/Kirubamoh/Monitoring-Archaealogical-sites-in-Conflict-areas/blob/master/Preprocessing/How%20it%C2%B4s%20done%20(Sen2Cor-Standalone)
 
-Next on you will need to download the scripts. You will find them here on Github in the Preprocessing folder and its called get-sen-2-py-mast.rar
+Next on you will need to download the scripts. 
+You will find them here on Github in the Preprocessing folder and its called get-sen-2-py-mast.rar
 
