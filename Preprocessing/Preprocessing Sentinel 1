@@ -1,0 +1,9 @@
+I did not find a way to do that without SNAP so far
+
+And the best way to do it is by following the instructions of this tutorial:
+
+https://eo-college.org/resources/snap-introduction/
+It is a nice visualized manual on how to preprocess the sentinel 1 data in SNAP
+To download it you need to sign up but it is free and they dont send out spam or anything.
+
+Important: The preprocessing can easily take up several hours!
