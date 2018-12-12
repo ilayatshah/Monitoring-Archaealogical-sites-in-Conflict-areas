@@ -7,7 +7,7 @@ Next on you will need the right GDAL Package for your Python setup
 
 Open up your CMD and type in: python
 it will show something along the lines of:Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
-The Python and the Bit Versions are importnat for the next steps. In the top example it would be "3.7" and "AMD64"
+The Python and the Bit Versions are important for the next steps. In the top example it would be "3.7" and "AMD64"
 
 With these infos go to https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal and search for the file that is fitting your Python
 Example: For me it would be GDAL‑2.3.2‑cp37‑cp37m‑win_amd64.whl because i use Python 3.7 with an 64bit architecture.
