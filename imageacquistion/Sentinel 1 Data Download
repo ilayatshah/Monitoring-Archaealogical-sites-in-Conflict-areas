@@ -32,12 +32,12 @@ After that you can take a look at the result by typing in:
 View(query)
 
 A list of files will show up.
-The best Files for us to use are unfortunatly the biggest ones. They are from the SLC type and are around 7GB.
-They are called something like S1A_IW_SLC__1SDV_20181016T152457_20181016
+The best Files for us to use are GRDH files.
+They are called something like S1A_IW_GRDH_1SDV_20180302T152448_20180302T152513_020838_023BBE_083B
 
 Look for the one with a date that you want scroll to the left and memorize the number of the table listing.
 
-if you want to download the 7th file you need to type in:
+if you want to download the e.g. 7th file you need to type in:
 getSentinel_data(records = query[7,],dir_out = "D:/Sattelitendaten/Sentinel1", username = username, password = password,)
 the dir_out = "fsdfsdffdf" part declares the folder where the image is downloaded to.
 
