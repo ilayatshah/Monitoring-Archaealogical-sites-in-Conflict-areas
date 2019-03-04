@@ -1,9 +1,15 @@
 I did not find a way to do that without SNAP so far
 
-And the best way to do it is by following the instructions of this tutorial:
+i  will provide you a xml file which you can use to preprocess Sentinel 1 Data as a batch in SNAP
 
-https://eo-college.org/resources/snap-introduction/
-It is a nice visualized manual on how to preprocess the sentinel 1 data in SNAP
-To download it you need to sign up but it is free and they dont send out spam or anything.
+Simply navigate to your SNAP installation and put the file into the graphs folder
 
-Important: The preprocessing can easily take up several hours!
+You can then open it up through the graphbuilder (searchbar in the top right and search for graphbuilder)
+
+You can now navigate through each process individually
+Important settings: Subset -> Set marker to Geographich Coordinates and paste this into the  field below
+POLYGON ((37.80773162841797 35.339385986328125, 38.316158294677734 35.339385986328125, 38.316158294677734 35.048858642578125, 37.80773162841797 35.048858642578125, 37.80773162841797 35.339385986328125, 37.80773162841797 35.339385986328125))
+Write -> Save as GeoTiff
+
+Important: Every radar image is diferent and some details get a higher visibility by changing some settings like different filter settings 
+for the Multi-temporal-speckle-filtering
