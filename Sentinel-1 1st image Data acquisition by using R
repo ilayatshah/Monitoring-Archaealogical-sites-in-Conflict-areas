@@ -1,0 +1,19 @@
+#Here is the full steps for data collections by using R
+library(devtools)
+> devtools::install_github("16EAGLE/getSpatialData")
+
+> library(getSpatialData)
+> library(mapedit)
+> drwn = drawFeatures()
+> aoi = drwn$geometry
+
+> View(drwn)
+> query <- getSentinel_query(time_range = c("2018-06-06", "2018-11-11"), aoi = aoi, platform = "Sentinel-1", username = "ilayatshah", password = "password")
+
+> View(query)
+> set_aoi(aoi)
+> password = "password"
+> username = "ilayatshah"
+
+> getSentinel_data(records = query[1,], dir_out = "D:/WWU/Monitering conflict 
+area wd satellite imagery/Sentinel-1", username = username, password = password)
