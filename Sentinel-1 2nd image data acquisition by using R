@@ -1,0 +1,19 @@
+#Here are the full steps for 2nd image acquisition.
+library(devtools)
+> devtools::install_github("16EAGLE/getSpatialData")
+
+> library(getSpatialData)
+> library(mapedit)
+> drwn = drawFeatures()
+> aoi = drwn$geometry
+
+> View(drwn)
+> query <- getSentinel_query(time_range = c("2016-06-06", "2016-08-08"), aoi = aoi, platform = "Sentinel-1", username = "ilayatshah", password = "bacha000700UOP")
+
+> View(query)
+> set_aoi(aoi)
+> password = "bacha000700UOP"
+> username = "ilayatshah"
+
+> getSentinel_data(records = query[1,], dir_out = "D:/WWU/Monitering conflict 
+area wd satellite imagery/Sentinel-1", username = username, password = password)
